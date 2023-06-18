@@ -3,14 +3,18 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
+import Dashboard from "./views/Dashboard";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    loader: () => ({ message: "Hello Data Router!" }),
-    Component() {
-      return <MainLayout />;
-    },
+    element: <MainLayout />,
+    children: [
+      {
+        path: '/',
+        element: <Dashboard />
+      }
+    ]
   },
 ]);
 

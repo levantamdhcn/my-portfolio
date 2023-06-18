@@ -50,6 +50,9 @@ declare module "@mui/material/styles" {
 }
 
 const globaltheme = createTheme({
+  typography: {
+    "fontFamily": `"Rubik", sans-serif;`,
+  },
   status: {
     danger: orange[500],
   },

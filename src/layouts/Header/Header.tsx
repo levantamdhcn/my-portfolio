@@ -58,15 +58,18 @@ const useStyles = makeStyles((theme: ThemeOptions) => ({
     margin: 0,
   },
   navItem: {
-    cursor: 'pointer',
     fontSize: 16,
     fontWeight: 600,
     '&:not(:last-child)': {
       paddingRight: 48,
-    },
+    }
+  },
+  navText: {
+    cursor: 'pointer',
     '&:hover': {
       color: theme.color.yellow,
-    }
+    },
+    color: theme.color.white,
   }
 }));
 
@@ -77,14 +80,19 @@ const Header = () => {
       <Container maxWidth="md" className={classes.header}>
         <nav className={classes.navContainer}>
           <a href="">
-            <img src="https://jthemes.net/themes/wp/bolby/bolby5/wp-content/uploads/sites/5/2021/01/logo-2.svg" alt="logo" />
+            <img
+              src="https://jthemes.net/themes/wp/bolby/bolby5/wp-content/uploads/sites/5/2021/01/logo-2.svg"
+              alt="logo"
+            />
           </a>
 
           <div>
             <ul className={classes.navWrapper}>
-              {
-                navs.map(nav => <li key={nav.id} className={classes.navItem}>{nav.label}</li>)
-              }
+              {navs.map((nav) => (
+                <li key={nav.id} className={classes.navItem}>
+                  <a className={classes.navText}>{nav.label}</a>
+                </li>
+              ))}
             </ul>
           </div>
         </nav>
