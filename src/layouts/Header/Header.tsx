@@ -35,6 +35,8 @@ const navs = [
 
 const useStyles = makeStyles((theme: ThemeOptions) => ({
   box: {
+    position: 'fixed',
+    width: '100%',
     backgroundColor: theme.color.mainColor,
     padding: "20px 0",
     "&. MuiBox-root": {

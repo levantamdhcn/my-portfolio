@@ -1,7 +1,9 @@
 import React from 'react'
 import { Avatar, Box, Button, Container, ThemeOptions, Typography } from '@mui/material';
+import { myAvatar } from '../../../../assets/images';
 import { makeStyles } from '@mui/styles';
 import { Facebook, Instagram, Twitter, LinkedIn } from '@mui/icons-material';
+import ScrollDown from './ScrollDown';
 
 const socials = [
   {
@@ -79,6 +81,11 @@ const useStyles = makeStyles((theme: ThemeOptions) => ({
     backgroundColor: `${theme.color.danger} !important`,
     padding: '12px 32px !important',
     height: '42px',
+    fontWeight: '700 !important',
+    fontSize: '16px !important',
+    '&:focus': {
+      outline: 'none',
+    }
   }
 }));
 
@@ -90,11 +97,11 @@ const Overview = () => {
         <div className={classes.overviewContainer}>
           <Avatar
             alt="Travis Howard"
-            src="https://jthemes.net/themes/wp/bolby/bolby5/wp-content/uploads/sites/5/2021/01/avatar-1-2.svg"
+            src={myAvatar}
             sx={{ width: 108, height: 108, marginBottom: "22px" }}
           />
 
-          <Typography className={classes.name}>Bolby Doe</Typography>
+          <Typography className={classes.name}>Le Van Tam</Typography>
           <Typography className={classes.title}>
             I’m a Front-end Developer
           </Typography>
@@ -106,7 +113,9 @@ const Overview = () => {
             ))}
           </ul>
 
-          <Button variant="contained" className={classes.button}>Hire me</Button>
+          <Button variant="contained" className={classes.button} sx={{ textTransform: 'none !important'}}>Hire me</Button>
+          
+          <ScrollDown />
         </div>
       </Container>
     </Box>
