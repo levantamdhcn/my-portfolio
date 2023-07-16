@@ -1,0 +1,15 @@
+export { default as myAvatar } from './images/avatar.jpg';
+export { default as dotBg } from './images/dots-bg.svg';
+export { default as JavaScript } from './javascript.svg';
+export { default as TypeScript } from './typescriptlang-icon.svg';
+export { default as Angular } from './angular.svg';
+export { default as React } from './react_icon.svg';
+export { default as NodeJS } from './nodejs-icon.svg';
+export { default as Gitlab } from './gitlab-icon.svg';
+export { default as Github } from './github.svg';
+export { default as HTML } from './HTML5.svg';
+export { default as CSS } from './css-icon.svg';
+export { default as SASS } from './sass-icon.svg';
+export { default as LESS } from './lesscss-icon.svg';
+export { default as LeafLet } from './leaflet.png';
+export { default as OpenLayers } from './openlayers.svg';

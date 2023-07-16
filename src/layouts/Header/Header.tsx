@@ -35,6 +35,7 @@ const navs = [
 
 const useStyles = makeStyles((theme: ThemeOptions) => ({
   box: {
+    zIndex: 99,
     position: 'fixed',
     width: '100%',
     backgroundColor: theme.color.mainColor,

@@ -1,9 +1,10 @@
 import React from 'react'
-import { Avatar, Box, Button, Container, ThemeOptions, Typography } from '@mui/material';
-import { myAvatar } from '../../../../assets/images';
+import { Avatar, Box, Container, ThemeOptions, Typography } from '@mui/material';
+import { myAvatar } from '../../../../assets';
 import { makeStyles } from '@mui/styles';
 import { Facebook, Instagram, Twitter, LinkedIn } from '@mui/icons-material';
 import ScrollDown from './ScrollDown';
+import MainButton from '../../../../components/MainButton';
 
 const socials = [
   {
@@ -113,7 +114,10 @@ const Overview = () => {
             ))}
           </ul>
 
-          <Button variant="contained" className={classes.button} sx={{ textTransform: 'none !important'}}>Hire me</Button>
+          <MainButton>
+            Hire me
+          </MainButton>
+          {/* <Button variant="contained" className={classes.button} sx={{ textTransform: 'none !important'}}>Hire me</Button> */}
           
           <ScrollDown />
         </div>

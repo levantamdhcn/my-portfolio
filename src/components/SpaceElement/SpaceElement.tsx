@@ -1,8 +1,8 @@
 import React from 'react'
 
-const SpaceElement = () => {
+const SpaceElement = ({ height }: { height: number }) => {
   return (
-    <div>SpaceElement</div>
+    <div style={{ height }}></div>
   )
 }
 
