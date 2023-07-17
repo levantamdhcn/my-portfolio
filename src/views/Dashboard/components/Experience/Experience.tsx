@@ -1,7 +1,10 @@
 import React from "react";
 import SectionWrapper from "@/components/SectionWrapper";
-import { Box, Grid } from "@mui/material";
+import { Box, Grid, ThemeOptions } from "@mui/material";
 import ExperienceItem from "./ExperienceItem";
+import { makeStyles } from "@mui/styles";
+import SchoolIcon from "@mui/icons-material/School";
+import WorkIcon from '@mui/icons-material/Work';
 
 const eduExperiences = [
   {
@@ -69,36 +72,63 @@ const workExperiences = [
   },
 ];
 
+const useStyles = makeStyles((theme: ThemeOptions) => ({
+  timelineWrapper: {
+    position: 'relative',
+    padding: 30,
+    boxSizing: 'border-box',
+    boxShadow: theme.shadow.main,
+    backgroundColor: theme.color.white,
+    borderRadius: 20,
+  },
+  line: {
+    position: 'absolute',
+    width: '1px',
+    backgroundColor: theme.color.danger,
+    top: '30px',
+    bottom: '30px',
+    left: '34px',
+  }
+}));
+
 const Experience = () => {
+  const classes = useStyles();
+
   return (
     <SectionWrapper title="Experience">
       <Box>
-        <Grid container>
+        <Grid container spacing={4}>
           <Grid item xs={6}>
-            {eduExperiences.map((ex) => {
-              const { icon, time, title, description } = ex;
-              return (
-                <ExperienceItem
-                  icon={icon}
-                  time={time}
-                  title={title}
-                  description={description}
-                />
-              );
-            })}
+            <Box className={classes.timelineWrapper}>
+              {eduExperiences.map((ex) => {
+                const { icon, time, title, description } = ex;
+                return (
+                  <ExperienceItem
+                    icon={<SchoolIcon />}
+                    time={time}
+                    title={title}
+                    description={description}
+                  />
+                );
+              })}
+              <span className={classes.line}></span>
+            </Box>
           </Grid>
           <Grid item xs={6}>
-            {workExperiences.map((ex) => {
-              const { icon, time, title, description } = ex;
-              return (
-                <ExperienceItem
-                  icon={icon}
-                  time={time}
-                  title={title}
-                  description={description}
-                />
-              );
-            })}
+            <Box className={classes.timelineWrapper}>
+              {workExperiences.map((ex) => {
+                const { icon, time, title, description } = ex;
+                return (
+                  <ExperienceItem
+                    icon={<WorkIcon />}
+                    time={time}
+                    title={title}
+                    description={description}
+                  />
+                );
+              })}
+              <span className={classes.line}></span>
+            </Box>
           </Grid>
         </Grid>
       </Box>

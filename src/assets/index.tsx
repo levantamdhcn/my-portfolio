@@ -13,3 +13,8 @@ export { default as SASS } from './sass-icon.svg';
 export { default as LESS } from './lesscss-icon.svg';
 export { default as LeafLet } from './leaflet.png';
 export { default as OpenLayers } from './openlayers.svg';
+export { default as OnlineCoures } from './online-course.svg';
+export { default as Travel } from './travel.png';
+export { default as CovidTracker } from './covid-tracker.png';
+export { default as CovidNews } from './covide-news.png';
+export { default as ChatApp } from './chat-app.svg';

@@ -45,6 +45,10 @@ declare module "@mui/material/styles" {
       lightGrey: string,
       blueColor: string,
       lightComet: string,
+      blue: string,
+    },
+    shadow: {
+      main: string;
     }
   }
 }
@@ -74,6 +78,10 @@ const globaltheme = createTheme({
     lightGrey: '#DEDEEA',
     blueColor: '#6C6CE5',
     lightComet: '#5E5C7F',
+    blue: '#7a7ae7',
+  },
+  shadow: {
+    main: '0px 5px 20px 0px rgba(69, 67, 96, 0.1)'
   }
 });
 
