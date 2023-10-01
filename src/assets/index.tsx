@@ -18,3 +18,4 @@ export { default as Travel } from './travel.png';
 export { default as CovidTracker } from './covid-tracker.png';
 export { default as CovidNews } from './covide-news.png';
 export { default as ChatApp } from './chat-app.svg';
+export { default as Map } from './images/map-1.svg';

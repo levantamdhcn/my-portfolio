@@ -6,6 +6,8 @@ import Experience from './components/Experience'
 import Overview from './components/Overview'
 import RecentWorks from './components/RecentWorks'
 import Skill from './components/Skills'
+import Contact from './components/Contact/Contact'
+import Footer from './components/Footer/Footer'
 
 const Dashboard = () => {
   return (
@@ -17,6 +19,8 @@ const Dashboard = () => {
       <Skill />
       <Experience />
       <RecentWorks />
+      <Contact />
+      <Footer />
     </div>
   )
 }
